@@ -2,8 +2,33 @@ import sqlite3
 
 # create empty database
 connect = sqlite3.connect('QuestionsAnswer1.db')
-
 cursor = connect.cursor()
+
+
+cursor.execute('''CREATE TABLE IF NOT EXISTS QuestionsAnswer1
+               (questions, answers)''')
+
+cursor.execute('SELECT * FROM QuestionsAnswer1')
+
+cursor.execute('''INSERT INTO QuestionsAnswer1 VALUES
+                What is the tallest mountain in the world?", "A",
+                Who wrote the novel 'To Kill a Mockingbird'?, "B",
+                What is the chemical symbol for gold?", "A",
+                Who painted 'Starry Night'?", "B",
+                What is the smallest planet in our solar system?, "A",
+                Which city is known as the City of Love?, "A",
+                What is the fastest bird in the world?, "A",
+                Who discovered penicillin?, "B",
+                What is the capital of Australia?, "C",
+                Which planet is known as the Red Planet?, "A"
+               
+               
+               ''')
+
+
+
+
+
 
 
 questions = {
