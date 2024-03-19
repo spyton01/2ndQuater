@@ -4,11 +4,11 @@ import sqlite3
 connect = sqlite3.connect('QuestionsAnswer1.db')
 cursor = connect.cursor()
 
+cursor.execute('SELECT * FROM QuestionsAnswer1')
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS QuestionsAnswer1
                (id integer, questions text, answers text)''')
 
-cursor.execute('SELECT * FROM QuestionsAnswer1')
 
 cursor.execute('''INSERT INTO QuestionsAnswer1 VALUES
                 1, 'What is the tallest mountain in the world? A: Mount Everest B: K2 C: Mount Kilimanjaro', "A",
