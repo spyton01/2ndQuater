@@ -22,7 +22,7 @@ cursor.execute('''
                ''')
 
 connect.commit()
-connect.close()
+
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Modern_History
                (id integer, questions text, answers text)''')
@@ -42,7 +42,7 @@ cursor.execute('''
                ''')
 
 connect.commit()
-connect.close()
+
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Finance
                (id integer, questions text, answers text)''')
@@ -62,7 +62,7 @@ cursor.execute('''
                ''')
 
 connect.commit()
-connect.close()
+
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Business_Analytics
                (id integer, questions text, answers text)''')
@@ -82,7 +82,7 @@ cursor.execute('''
                ''')
 
 connect.commit()
-connect.close()
+
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Prog_Logic
                (id integer, questions text, answers text)''')
