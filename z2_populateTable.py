@@ -21,9 +21,6 @@ cursor.execute('''
                (10, 'What is the key outcome expected from Operation Logistic OCM? A: Cost reduction B: Improved operational agility C: Increased customer satisfaction', "B")
                ''')
 
-connect.commit()
-
-
 cursor.execute('''CREATE TABLE IF NOT EXISTS Modern_History
                (id integer, questions text, answers text)''')
 
@@ -41,15 +38,12 @@ cursor.execute('''
                (10, 'What year did the Berlin Wall fall, symbolizing the end of the Cold War? A: 1989 B: 1991 C: 1987', "A")
                ''')
 
-connect.commit()
-
-
 cursor.execute('''CREATE TABLE IF NOT EXISTS Finance
                (id integer, questions text, answers text)''')
 
 cursor.execute('''
                INSERT INTO Finance (id, questions, answers) VALUES
-               (1, 'What is the primary function of a central bank in a country\'s economy? A: Regulating interest rates B: Issuing currency C: Conducting monetary policy', "C"),
+               (1, 'What is the primary function of a central bank in a country\`s economy? A: Regulating interest rates B: Issuing currency C: Conducting monetary policy', "C"),
                (2, 'Who is known as the "Oracle of Omaha" in the world of finance? A: Warren Buffett B: Bill Gates C: Elon Musk', "A"),
                (3, 'What is the term for the measure of the rate of return on an investment relative to its cost? A: Dividend yield B: Return on investment (ROI) C: Price-to-earnings (P/E) ratio', "B"),
                (4, 'Which financial instrument represents ownership in a corporation? A: Bond B: Stock C: Mutual fund', "B"),
@@ -58,11 +52,8 @@ cursor.execute('''
                (7, 'What is the term for a financial asset representing a promise to repay a loan with interest at a specified date in the future? A: Stock B: Bond C: Option', "B"),
                (8, 'Which type of risk refers to the possibility of loss due to changes in interest rates? A: Credit risk B: Market risk C: Interest rate risk', "C"),
                (9, 'What is the term for the practice of spreading investments among different assets to reduce risk? A: Diversification B: Leverage C: Arbitrage', "A"),
-               (10, 'What financial ratio measures a company\'s ability to cover its short-term liabilities with its short-term assets? A: Current ratio B: Debt-to-equity ratio C: Return on equity (ROE)', "A")
+               (10, 'What financial ratio measures a company\`s ability to cover its short-term liabilities with its short-term assets? A: Current ratio B: Debt-to-equity ratio C: Return on equity (ROE)', "A")
                ''')
-
-connect.commit()
-
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Business_Analytics
                (id integer, questions text, answers text)''')
@@ -72,7 +63,7 @@ cursor.execute('''
                (1, 'What statistical method is used to identify patterns and relationships in large datasets? A: Regression analysis B: Cluster analysis C: Time series analysis', "B"),
                (2, 'Which software tool is commonly used for data visualization and business intelligence? A: Tableau B: Python C: Excel', "A"),
                (3, 'What is the term for the process of transforming raw data into meaningful insights for business decision-making? A: Data mining B: Data wrangling C: Data analytics', "C"),
-               (4, 'Which key performance indicator (KPI) measures a company\'s profitability relative to its revenue? A: Return on investment (ROI) B: Gross profit margin C: Net promoter score (NPS)', "B"),
+               (4, 'Which key performance indicator (KPI) measures a company\`s profitability relative to its revenue? A: Return on investment (ROI) B: Gross profit margin C: Net promoter score (NPS)', "B"),
                (5, 'What technique is used to forecast future values based on historical data? A: Regression analysis B: Time series analysis C: Monte Carlo simulation', "B"),
                (6, 'Which type of analysis is used to identify factors that drive customer behavior and preferences? A: Market basket analysis B: Cohort analysis C: Customer segmentation', "C"),
                (7, 'What is the term for the process of identifying and rectifying errors or inconsistencies in data? A: Data cleansing B: Data validation C: Data aggregation', "A"),
@@ -80,8 +71,6 @@ cursor.execute('''
                (9, 'What is the term for a statistical model used to predict the probability of a binary outcome? A: Decision tree B: Logistic regression C: Naive Bayes classifier', "B"),
                (10, 'What technique is used to identify outliers or anomalies in a dataset? A: Descriptive analytics B: Predictive analytics C: Anomaly detection', "C")
                ''')
-
-connect.commit()
 
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS Prog_Logic
