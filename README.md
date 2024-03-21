@@ -5,7 +5,7 @@ This Python quiz game for testing your knowledge in University junior level topi
 ## Setup Instructions
 
 
-1. **Download the Code File**:  (`app.py`) on your computer.
+1. **Download the Code File**:  (`app.py`), (`read.py`) on your computer.
 
 2. **Download the Database File**: Make sure you have the SQLite database file (`QuestionsAnswer1.db`) it has  the quiz questions and answers.
 
