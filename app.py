@@ -31,10 +31,12 @@ def main():
         score = 0
         total_questions = len(questions)
 
-        # Iterating through each question
+        # repeat through each question
+        # `qid`` is for ID the questions, link them to external data
         for qid, question, answer in questions:
             print(f"Question {qid}: {question}")
             # Prompting user for their answer
+            # `strip` is for removing whitespace
             user_answer = input("Your answer: ").strip().upper()
 
             # Checking if the user's answer is correct
@@ -50,6 +52,8 @@ def main():
     else:
         # Informing user if no questions found for the specified topic
         print("No questions found for the specified topic.")
+       
 
+        # Checks whether the current script is being run directly as the main program
 if __name__ == "__main__":
     main()
