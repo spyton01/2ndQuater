@@ -4,9 +4,11 @@ import sqlite3
 connect = sqlite3.connect('QuestionsAnswer1.db')
 cursor = connect.cursor()
 
+# create table
 cursor.execute('''CREATE TABLE IF NOT EXISTS OCM_Logistic
                (id integer, questions text, answers text)''')
 
+# fill in table with values
 cursor.execute('''
                INSERT INTO OCM_Logistic (id, questions, answers) VALUES
                (1, 'What is the primary objective of Operation Logistic OCM? A: Enhancing supply chain efficiency B: Implementing new technology solutions C: Streamlining operational processes', "A"),
@@ -90,5 +92,8 @@ cursor.execute('''
                (10, 'Which logical operator returns true if at least one of its operands is true? A: AND B: OR C: NOT', "B")
                ''')
 
+# sending data to .db file
 connect.commit()
+
+# stop command
 connect.close()

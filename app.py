@@ -1,6 +1,6 @@
 import sqlite3
 
-# ANSI escape codes for color formatting
+#codes for color formatting
 GREEN = '\033[92m'
 RED = '\033[91m'
 END = '\033[0m'  # End formatting
