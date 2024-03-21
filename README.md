@@ -9,7 +9,7 @@ This Python quiz game for testing your knowledge in University junior level topi
 
 2. **Download the Database File**: Make sure you have the SQLite database file (`QuestionsAnswer1.db`) it has  the quiz questions and answers.
 
-3. **ignore the Following File**: ignore (`read.py`) file. All it does is just for editing table and lists of questions and answers.
+3. **Ignore the Following File**: ignore (`read.py`) file. All it does is just for editing table and lists of questions and answers.
 
 4. **Open the File**: open (`app.py`) Visual Studio Code is reccommended.
 

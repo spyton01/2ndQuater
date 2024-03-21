@@ -1,3 +1,4 @@
+# enable database feature (does not require server)
 import sqlite3
 
 # create empty database

@@ -1,29 +1,29 @@
 import sqlite3
 
-#codes for color formatting
-GREEN = '\033[92m'
-RED = '\033[91m'
-END = '\033[0m'  # End formatting
+# ANSI escape codes for terminal text colors
+CORRECT_COLOR = '\033[38;2;0;225;0m'  # Green color for correct answer
+WRONG_COLOR = '\033[38;2;225;0;0m'     # Red color for wrong answer
+RESET_COLOR = '\033[0m'                 # Reset color
 
 def fetch_questions(topic):
-    # Connect to the database
+    # Establishing connection to the SQLite database
     connection = sqlite3.connect('QuestionsAnswer1.db')
     cursor = connection.cursor()
 
-    # Fetch questions for the specified topic
+    # Fetching questions and answers from the specified table
     cursor.execute(f'SELECT id, questions, answers FROM {topic}')
     questions = cursor.fetchall()
 
-    # Close the connection
+    # Closing the database connection
     connection.close()
 
     return questions
 
 def main():
-    # Specify the topic for which you want to fetch questions
+    # Asking user to input the topic
     topic = input("Enter the topic (e.g., 'OCM_Logistic', 'Modern_History', 'Finance', 'Business_Analytics', 'Prog_Logic'): ")
 
-    # Fetch questions for the specified topic
+    # Fetching questions related to the specified topic
     questions = fetch_questions(topic)
 
     if questions:
@@ -31,20 +31,24 @@ def main():
         score = 0
         total_questions = len(questions)
 
-        # Iterate over each question
+        # Iterating through each question
         for qid, question, answer in questions:
             print(f"Question {qid}: {question}")
+            # Prompting user for their answer
             user_answer = input("Your answer: ").strip().upper()
 
-            # Check if the answer is correct
+            # Checking if the user's answer is correct
             if user_answer == answer:
-                print(f"{GREEN}Correct!{END}")
+                print(CORRECT_COLOR + "Correct!" + RESET_COLOR)
                 score += 1
             else:
-                print(f"{RED}Wrong! Correct answer is {answer}{END}")
+                # Displaying correct answer if user's answer is wrong
+                print(WRONG_COLOR + f"Wrong! Correct answer is {answer}" + RESET_COLOR)
 
+        # Displaying the quiz score
         print(f"\nQuiz done! You scored {score}/{total_questions}")
     else:
+        # Informing user if no questions found for the specified topic
         print("No questions found for the specified topic.")
 
 if __name__ == "__main__":
