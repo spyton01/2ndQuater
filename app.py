@@ -1,12 +1,12 @@
 import sqlite3
 
 # ANSI escape codes for terminal text colors
-CORRECT_COLOR = '\033[38;2;0;225;0m'  # Green color for correct answer
-WRONG_COLOR = '\033[38;2;225;0;0m'     # Red color for wrong answer
+CORRECT_COLOR = '\033[38;2;0;225;0m'  # Green
+WRONG_COLOR = '\033[38;2;225;0;0m'     # Red
 RESET_COLOR = '\033[0m'                 # Reset color
 
 def fetch_questions(topic):
-    # Establishing connection to the SQLite database
+    # Create connection to the SQLite database
     connection = sqlite3.connect('QuestionsAnswer1.db')
     cursor = connection.cursor()
 
@@ -21,7 +21,7 @@ def fetch_questions(topic):
 
 def main():
     # Asking user to input the topic
-    topic = input("Enter the topic (e.g., 'OCM_Logistic', 'Modern_History', 'Finance', 'Business_Analytics', 'Prog_Logic'): ")
+    topic = input("Enter the topic ('OCM_Logistic', 'Modern_History', 'Finance', 'Business_Analytics', 'Prog_Logic'): ")
 
     # Fetching questions related to the specified topic
     questions = fetch_questions(topic)
